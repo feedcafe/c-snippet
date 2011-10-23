@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define	ARRAY_SIZE(a)	sizeof(a) / sizeof(a[0])
+#define	ARRAY_SIZE(a)	(sizeof(a) / sizeof(a[0]))
 /* #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]) + __must_be_array(arr)) */
 
 int main()
