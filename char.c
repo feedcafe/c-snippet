@@ -3,8 +3,9 @@
 
 int main()
 {
-	char pmsg[] = "hello, world!";
+	char *pmsg = "hello, world!";
 
+	/* result in Segmentation fault */
 	strcpy(pmsg, "hi, there."); 
 	printf("%s\n", pmsg);
 
