@@ -22,9 +22,24 @@ void str2mac(unsigned char *mac_addr, const unsigned char *mac)
 int main()
 {
 	unsigned char *mac = "031987072715";
+	const char *mac1 = "03:19:87:07:27:15";
 	unsigned char mac_addr[6];
 
 	str2mac(mac_addr, mac);
+
+	printf("%02x:%02x:%02x:%02x:%02x:%02x\n",
+			mac_addr[0], mac_addr[1],
+			mac_addr[2], mac_addr[3],
+			mac_addr[4], mac_addr[5]);
+	//printf("%s\n", mac1);
+
+	sscanf(mac1, "%02x:%02x:%02x:%02x:%02x:%02x",
+			(unsigned int *)&mac_addr[0],
+			(unsigned int *)&mac_addr[1],
+			(unsigned int *)&mac_addr[2],
+			(unsigned int *)&mac_addr[3],
+			(unsigned int *)&mac_addr[4],
+			(unsigned int *)&mac_addr[5]);
 
 	printf("%02x:%02x:%02x:%02x:%02x:%02x\n",
 			mac_addr[0], mac_addr[1],
