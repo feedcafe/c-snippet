@@ -6,9 +6,15 @@ void str2mac(unsigned char *mac_addr, const unsigned char *mac)
 	unsigned char mac1[12];
 
 	for (i = 0; i < 12; i++) {
-		mac1[i] = mac[i] - 0x30; 
-		//printf("%x\n", mac1[i]);
-		printf("%x\n", mac1[i] << 4);
+		if (isdigit(mac[i]))
+			mac1[i] = mac[i] - 0x30;
+		else if (isupper(mac[i]))
+			mac1[i] = mac[i] - 0x37;
+		else
+			mac1[i] = mac[i] - 0x57;
+
+		printf("%x\n", mac1[i]);
+		//printf("%x\n", mac1[i] << 4);
 	}
 
 	mac_addr[0] = (mac1[0] << 4) | mac1[1];
@@ -21,7 +27,8 @@ void str2mac(unsigned char *mac_addr, const unsigned char *mac)
 
 int main()
 {
-	unsigned char *mac = "031987072715";
+	//unsigned char *mac = "031987072715";
+	unsigned char *mac = "03BAbe072715";
 	const char *mac1 = "03:19:87:07:27:15";
 	unsigned char mac_addr[6];
 
