@@ -1,6 +1,6 @@
 OBJS := and array foo ascii char memtest sizeofarray ifdef \
 	sizeof typeof shift popcount string2hex zero_array \
-	asprintf microsoft
+	asprintf microsoft bit_complete
 
 all : $(OBJS)
 
