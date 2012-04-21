@@ -54,7 +54,8 @@ int *array;	/* C:  */
 int main()
 {
 	char s[] = "hello";	/* s is on stack, "hello" .text?? */
-	char *p = "world";	/* p is allocated at build time, "world" .rodata */
+	char *p = "world";	/* p is on stack, "world" .rodata
+				 * and is allocated at build time */
 	int k;			/* on stack */
 	static int l = 87;	/* d: data section */
 	static char *p0 = "happy";	/* d: data section, "happy" .rodata */
