@@ -106,5 +106,10 @@ int main()
 
 	test_sizeof_struct();
 
+	printf("short: %d\n", sizeof(short));
+	printf("int: %d\n", sizeof(int));
+	printf("long: %d\n", sizeof(long));
+	printf("long long: %d\n", sizeof(long long));
+
 	return 0;
 }
