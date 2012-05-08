@@ -10,4 +10,4 @@ $(OBJS): $(OBJS:%=%.c)
 	$(CC) -o $@ $(@:%=%.c) -Wall
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) *.s
