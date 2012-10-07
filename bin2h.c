@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		if (decimal)
 			printf("%.3d", ch);
 		else
-			printf("0x%.2x", ch);
+			printf("0x%.2x", (unsigned char)ch);
 	}
 
 	printf("\n};\n");
