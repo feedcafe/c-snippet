@@ -24,7 +24,9 @@ int main(int argc, char *argv[])
 	/* retrieve file name */
 	strncpy(filename, argv[1], strlen(argv[1]));
 	file_extention = rindex(filename, '.');
-	*file_extention = '\0';
+
+	if (file_extention)
+		*file_extention = '\0';
 
 	/* options */
 	while ((c = getopt(argc, argv, "dl:")) != -1) {
