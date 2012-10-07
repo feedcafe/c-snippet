@@ -3,7 +3,7 @@ OBJS := and array foo ascii char memtest sizeofarray ifdef \
 	asprintf microsoft bit_complete gcc_optimise	   \
 	comiler-specific max malloc0 endian odd_array      \
 	volatile corcpp atexit swap helloworld nomain	   \
-	printf weak
+	printf weak bin2h
 
 all : $(OBJS)
 
