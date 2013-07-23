@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 		} 
 
 		while (i < length) {
-			struct inotify_event *event = (struct inotify_event *) &buffer[ i];
+			struct inotify_event *event = (struct inotify_event *) &buffer[i];
 			if (event->len) {
 				if (event->mask & IN_CREATE) {
 					if (event->mask & IN_ISDIR)
@@ -55,14 +55,14 @@ int main(int argc, char **argv)
 						printf("The file %s was Created with WD %d\n", event->name, event->wd );      
 				}
 
-				if ( event->mask & IN_MODIFY) {
+				if (event->mask & IN_MODIFY) {
 					if (event->mask & IN_ISDIR)
 						printf("The directory %s was modified.\n", event->name );      
 					else
 						printf("The file %s was modified with WD %d\n", event->name, event->wd );      
 				}
 
-				if ( event->mask & IN_DELETE) {
+				if (event->mask & IN_DELETE) {
 					if (event->mask & IN_ISDIR)
 						printf("The directory %s was deleted.\n", event->name );      
 					else
@@ -76,8 +76,8 @@ int main(int argc, char **argv)
 	}
 
 	/* Clean up*/
-	inotify_rm_watch( fd, wd );
-	close( fd );
+	inotify_rm_watch(fd, wd);
+	close(fd);
 
 	return 0;
 }
