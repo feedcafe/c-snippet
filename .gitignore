@@ -1,3 +1,6 @@
 a.out
 .*.swp
 .swp
+cscope.in.out
+cscope.out
+cscope.po.out
