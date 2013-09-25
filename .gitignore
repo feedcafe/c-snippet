@@ -1,5 +1,6 @@
 a.out
 .*.swp
+.*.swo
 .swp
 cscope.in.out
 cscope.out
