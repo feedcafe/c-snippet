@@ -36,7 +36,7 @@ int main()
 	append(&blist, "IL", 60561);
 
 	/* iterates list */
-	list_for_each_entry(iter,&blist.list,list) {
+	list_for_each_entry(iter, &blist.list, list) {
 		printf("%s %d\n", iter->str, iter->val);
 	}
 
