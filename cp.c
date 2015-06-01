@@ -41,7 +41,7 @@ int btsnoop_log_backup(char *logfile)
 			if (bytes_wrote < 0) {
 				fprintf(stderr, "write to backup file failed\n");
 				break;
-			} else if ( bytes_wrote == bytes_read)
+			} else if (bytes_wrote == bytes_read)
 				break;
 
 			ptr += bytes_wrote;
