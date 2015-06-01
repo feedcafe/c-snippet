@@ -9,7 +9,7 @@ int main()
 	char *root;
 
 	l = asprintf(&root, SYSFS "%s/", "/class/firmware/mmc0:0006:1");
-	printf("asprintf return value: %d\n", l);
+	printf("asprintf return value: %d, %s\n", l, root);
 
 	return 0;
 }
