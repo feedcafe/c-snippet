@@ -3,8 +3,9 @@ OBJS := and array foo ascii char memtest sizeofarray ifdef \
 	asprintf microsoft bit_complete gcc_optimise	   \
 	comiler-specific max malloc0 endian odd_array      \
 	volatile corcpp atexit swap helloworld nomain	   \
-	printf weak bin2h inotify signal list		   \
-	get_local_macaddr time cp strsep strtok bitfield
+	printf weak bin2h inotify signal list color	   \
+	get_local_macaddr time cp strsep strtok bitfield   \
+	strptime
 
 all : $(OBJS)
 
